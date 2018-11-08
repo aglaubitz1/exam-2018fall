@@ -32,6 +32,25 @@
 
     <script type="text/javascript">
 
+        function text(x) {
+            let text1=document.getElementById("happy");
+            let text2=document.getElementById("nothappy");
+
+            if (x == "smile") {
+                text1.style.color = "red";
+                text1.style.fontSize = "2em";
+                text1.style.fontFamily = "lucida handwriting";
+                text1.style.backgroundColor = "yellow";
+            }
+            else if (x == "sad") {
+                text2.style.color = "green";
+                text2.style.textDecoration ="bold";
+                text2.style.fontSize ="2em";
+                text2.style.backgroundColor = "blue";
+                text2.style.fontFamily = "arial";
+            }
+        }
+
     </script>
 </head>
 
@@ -49,12 +68,12 @@
 
     <table>
         <tr>
-            <td><img src="smiley.jpg" alt="Smiling Face" title="Smile"></td>
-            <td>Web Tech Rocks!</td>
+            <td><img src="smiley.jpg" alt="Smiling Face" title="Smile" onclick="text('smile')"></td>
+            <td id="happy">Web Tech Rocks!</td>
         </tr>
         <tr>
-            <td><img src="frown.jpg" alt="Frown Face" title="Sad"></td>
-            <td>Web Tech Sucks!</td>
+            <td><img src="frown.jpg" alt="Frown Face" title="Sad" onclick="text('sad')"></td>
+            <td id="nothappy">Web Tech Sucks!</td>
         </tr>
 
     </table>
